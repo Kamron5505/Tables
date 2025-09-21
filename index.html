@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            min-width: 600px;
+            width: 100%;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: top;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 480px) {
+            td {
+                padding: 5px;
+            }
+
+            img {
+                max-width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td>Коля</td>
+                <td>Ваня</td>
+                <td>Катя</td>
+                <td>Маша</td>
+            </tr>
+            <tr>
+                <td><img src="kolya.jpg" alt="Фото Коли"></td>
+                <td><img src="vanya.jpg" alt="Фото Вани"></td>
+                <td><img src="katya.jpg" alt="Фото Кати"></td>
+                <td><img src="masha.jpg" alt="Фото Маши"></td>
+            </tr>
+            <tr>
+                <td>Описание Коли</td>
+                <td>Описание Вани</td>
+                <td>Описание Кати</td>
+                <td>Описание Маши</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
