@@ -4,23 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная таблица</title>
     <style>
-        .table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-        }
-
         table {
             border-collapse: collapse;
-            min-width: 600px;
             width: 100%;
         }
 
         td {
+            border: none;
             text-align: center;
             vertical-align: top;
             padding: 10px;
-            word-wrap: break-word;
         }
 
         img {
@@ -30,13 +25,67 @@
             margin: 0 auto;
         }
 
-        @media (max-width: 480px) {
-            td {
-                padding: 5px;
+        @media (max-width: 768px) {
+            table {
+                display: block;
             }
 
-            img {
-                max-width: 80px;
+            tr {
+                display: contents;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+                padding: 6px 0;
+            }
+
+            td:nth-child(1) {
+                order: 1;
+            }
+
+            td:nth-child(2) {
+                order: 4;
+            }
+
+            td:nth-child(3) {
+                order: 7;
+            }
+
+            td:nth-child(4) {
+                order: 10;
+            }
+
+            tr:nth-child(2) td:nth-child(1) {
+                order: 2;
+            }
+
+            tr:nth-child(2) td:nth-child(2) {
+                order: 5;
+            }
+
+            tr:nth-child(2) td:nth-child(3) {
+                order: 8;
+            }
+
+            tr:nth-child(2) td:nth-child(4) {
+                order: 11;
+            }
+
+            tr:nth-child(3) td:nth-child(1) {
+                order: 3;
+            }
+
+            tr:nth-child(3) td:nth-child(2) {
+                order: 6;
+            }
+
+            tr:nth-child(3) td:nth-child(3) {
+                order: 9;
+            }
+
+            tr:nth-child(3) td:nth-child(4) {
+                order: 12;
             }
         }
     </style>
@@ -44,28 +93,26 @@
 
 <body>
 
-    <div class="table-wrapper">
-        <table>
-            <tr>
-                <td>Коля</td>
-                <td>Ваня</td>
-                <td>Катя</td>
-                <td>Маша</td>
-            </tr>
-            <tr>
-                <td><img src="kolya.jpg" alt="Фото Коли"></td>
-                <td><img src="vanya.jpg" alt="Фото Вани"></td>
-                <td><img src="katya.jpg" alt="Фото Кати"></td>
-                <td><img src="masha.jpg" alt="Фото Маши"></td>
-            </tr>
-            <tr>
-                <td>Описание Коли</td>
-                <td>Описание Вани</td>
-                <td>Описание Кати</td>
-                <td>Описание Маши</td>
-            </tr>
-        </table>
-    </div>
+    <table>
+        <tr>
+            <td>Коля</td>
+            <td>Ваня</td>
+            <td>Катя</td>
+            <td>Маша</td>
+        </tr>
+        <tr>
+            <td><img src="kolya.jpg" alt="Фото Коли"></td>
+            <td><img src="vanya.jpg" alt="Фото Вани"></td>
+            <td><img src="katya.jpg" alt="Фото Кати"></td>
+            <td><img src="masha.jpg" alt="Фото Маши"></td>
+        </tr>
+        <tr>
+            <td>Описание Коли</td>
+            <td>Описание Вани</td>
+            <td>Описание Кати</td>
+            <td>Описание Маши</td>
+        </tr>
+    </table>
 
 </body>
 
